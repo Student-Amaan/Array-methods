@@ -74,11 +74,55 @@ let result = number.map((num) => num * 2);
 console.log(result);
 
 let someUser = [
-    { name: "Aman", age: 22 },
-    { name: 'danish', age: 23},
-    { class: 13 , grade: 'A'}
+  { name: "Aman", age: 22 },
+  { name: "danish", age: 23 },
+  { class: 13, grade: "A" },
 ];
 
-let allusers = someUser.map(user => user.class)
-console.log(allusers)
+let allusers = someUser.map((user) => user.class);
+console.log(allusers);
 
+// filter() array pawarful method ha . array ka har element per condition lagata ha. our sirf wo element return kardanga gho condition true ha
+
+let elementArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+let elementRes = elementArr.filter((elArr) => elArr % 2 == 0);
+console.log(elementRes);
+
+const useArr = [
+  { name: "danish", age: 22 },
+  { name: "alisa", age: 23 },
+  { name: "Aman", age: 13 },
+];
+
+let finalUser = useArr.filter((usArr) => usArr.age >= 18);
+console.log(finalUser);
+
+
+// forEach() ya b ek array [] method ha. ya sirf loop chalana ka lya hota ha koch return nahi karta
+
+let bigNumber = [1,2,3,4,6,5,33]
+
+bigNumber.forEach(nm => {
+    console.log(nm * 5);
+})
+
+// Real world project ma eysa use hota ha
+
+const useArr1 = [
+  { name: "danish", age: 22 },
+  { name: "alisa", age: 23 },
+  { name: "Aman", age: 13 },
+];
+
+useArr.forEach(Uar => {
+    console.log(Uar.name)
+})
+
+// find() ya ek array method ha jho array ma sa phala element return karta ha jho given condition ko sitisfied karra sirf phala match return karta ha. aghar na mala tho undefined dhata ha
+
+let findMtd = [30,25,2,77,64]
+
+const finalFind = findMtd.find(fnd => fnd > 50)
+
+console.log(finalFind)
