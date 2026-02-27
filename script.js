@@ -96,16 +96,15 @@ const useArr = [
 ];
 
 let finalUser = useArr.filter((usArr) => usArr.age >= 18);
-console.log(finalUser);
+console.log(finalUser)
 
+// forEach() ya b ek array [] method ha. ya sirf loop chalana ka lya hota ha koch return nahi karta;
 
-// forEach() ya b ek array [] method ha. ya sirf loop chalana ka lya hota ha koch return nahi karta
+let bigNumber = [1, 2, 3, 4, 6, 5, 33];
 
-let bigNumber = [1,2,3,4,6,5,33]
-
-bigNumber.forEach(nm => {
-    console.log(nm * 5);
-})
+bigNumber.forEach((nm) => {
+  console.log(nm * 5);
+});
 
 // Real world project ma eysa use hota ha
 
@@ -115,43 +114,52 @@ const useArr1 = [
   { name: "Aman", age: 13 },
 ];
 
-useArr.forEach(Uar => {
-    console.log(Uar.name)
-})
+useArr.forEach((Uar) => {
+  console.log(Uar.name);
+});
 
 // find() ya ek array method ha jho array ma sa phala element return karta ha jho given condition ko sitisfied karra sirf phala match return karta ha. aghar na mala tho undefined dhata ha
 
-let findMtd = [30,25,2,77,64]
+let findMtd = [30, 25, 2, 77, 64];
 
-const finalFind = findMtd.find(fnd => fnd > 50)
+const finalFind = findMtd.find((fnd) => fnd > 50);
 
-console.log(finalFind)
+console.log(finalFind);
 
 // find() real world example
 
 const usFind = [
-    {id: 1, name: 'danish'},
-    {id: 2, name: 'aman'},
-    {id: 3, name: 'waxir'},
-]
+  { id: 1, name: "danish" },
+  { id: 2, name: "aman" },
+  { id: 3, name: "waxir" },
+];
 
-let allFind = usFind.find(u => u.id === 2)
+let allFind = usFind.find((u) => u.id === 2);
 
-console.log(allFind)
+console.log(allFind);
 
-let taskArr = []
+let taskArr = [];
 
-function taskadd(add){
-    taskArr.push(add)
+function taskadd(add) {
+  taskArr.push(add);
 }
 
-function deleteTask(del){
-    taskArr.splice(del,1)
+function deleteTask(del) {
+  taskArr.splice(del, 1);
 }
 
-taskadd(4,5,6,7,2,8, ' aman ')
+taskadd(4, 5, 6, 7, 2, 8, " aman ");
 
-console.log(taskArr)
+console.log(taskArr);
 
-deleteTask(4)
-console.log(taskArr)
+deleteTask(4);
+console.log(taskArr);
+
+let element = document.createElement("li");
+
+element.addEventListener("click", () => {
+  console.log("button is clicked");
+  element.innerText = "Aman waxir";
+});
+
+
