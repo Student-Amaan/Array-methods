@@ -1,5 +1,8 @@
 async function photoApi() {
+  let loading = document.querySelector("#loading");
+  const gallery = document.querySelector(".container");
   try {
+    loading.style.display = "block";
     const response = await fetch(
       "https://picsum.photos/v2/list?page=1&limit=100",
     );
@@ -9,7 +12,7 @@ async function photoApi() {
     }
     const photoes = await response.json();
     console.log(photoes);
-    const gallery = document.querySelector(".container");
+    gallery.innerHTML = "";
 
     photoes.forEach((photo) => {
       const img = document.createElement("img");
@@ -27,4 +30,4 @@ async function photoApi() {
 //     photoApi()
 // })
 
-photoApi()
+photoApi();
