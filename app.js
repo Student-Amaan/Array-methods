@@ -11,7 +11,7 @@ async function photoApi() {
       throw new error("server have some issue");
     }
     const photoes = await response.json();
-    console.log(photoes);
+    
     gallery.innerHTML = "";
 
     photoes.forEach((photo) => {
